@@ -3,17 +3,20 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ParallaxShowcase from './components/ParallaxShowcase'
 import Categories from './components/Categories'
+import NewListings from './components/NewListings'
+import SearchFilters from './components/SearchFilters'
 import CTA from './components/CTA'
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Starry subtle background pattern */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(2,6,23,0.6),transparent_60%),radial-gradient(ellipse_at_bottom,rgba(2,6,23,0.8),transparent_60%)]" />
 
       <Navbar />
       <main>
         <Hero />
+        <SearchFilters />
+        <NewListings />
         <Categories />
         <ParallaxShowcase />
         <CTA />
