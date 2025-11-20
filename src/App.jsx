@@ -5,6 +5,7 @@ import ParallaxShowcase from './components/ParallaxShowcase'
 import Categories from './components/Categories'
 import NewListings from './components/NewListings'
 import SearchFilters from './components/SearchFilters'
+import ChatWidget from './components/ChatWidget'
 import CTA from './components/CTA'
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <ChatWidget />
     </div>
   )
 }
