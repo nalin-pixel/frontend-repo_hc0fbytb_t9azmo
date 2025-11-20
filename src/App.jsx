@@ -1,26 +1,16 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import ParallaxShowcase from './components/ParallaxShowcase'
-import Categories from './components/Categories'
-import NewListings from './components/NewListings'
-import SearchFilters from './components/SearchFilters'
 import ChatWidget from './components/ChatWidget'
-import CTA from './components/CTA'
 
-function App() {
+function Layout() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(2,6,23,0.6),transparent_60%),radial-gradient(ellipse_at_bottom,rgba(2,6,23,0.8),transparent_60%)]" />
 
       <Navbar />
       <main>
-        <Hero />
-        <SearchFilters />
-        <NewListings />
-        <Categories />
-        <ParallaxShowcase />
-        <CTA />
+        <Outlet />
       </main>
 
       <footer className="border-t border-white/10 py-10">
@@ -39,4 +29,4 @@ function App() {
   )
 }
 
-export default App
+export default Layout

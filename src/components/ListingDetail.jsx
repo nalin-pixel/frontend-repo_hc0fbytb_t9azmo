@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, MapPin } from 'lucide-react'
+import FeatureButton from './FeatureButton'
 
 function StaticMap({ lat, lon, label }) {
   if (lat == null || lon == null) return null
@@ -60,6 +61,9 @@ export default function ListingDetail() {
             <div className="mt-6 grid grid-cols-2 gap-3">
               <div className="rounded-xl border border-white/10 bg-white/5 p-4">Kategória: {item.category}</div>
               <div className="rounded-xl border border-white/10 bg-white/5 p-4 flex items-center gap-2"><MapPin className="h-4 w-4" /> Mesto: {item.city || '—'}</div>
+            </div>
+            <div className="mt-6">
+              <FeatureButton listingId={item.id} />
             </div>
           </div>
         </div>

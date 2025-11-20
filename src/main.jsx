@@ -1,19 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App'
-import Test from './Test'
-import ListingDetail from './components/ListingDetail'
+import { BrowserRouter } from 'react-router-dom'
+import Layout from './App'
+import AppRoutes from './components/Routes'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/listing/:id" element={<ListingDetail />} />
-      </Routes>
+      <Layout />
+      <div className="pt-24">
+        <AppRoutes />
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
 )
